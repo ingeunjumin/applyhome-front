@@ -7,3 +7,20 @@
 - rafce
 
 ### Notes
+
+- react kakao map 사용시 버전 주의
+  "react": "^17.0.2",
+  "react-dom": "^17.0.2"
+
+### 폴더 구조
+
+```
+src
+│
+└───common (공통 폴더)
+    └───api
+│
+└───components (컴포넌트 모음)
+│
+└───features (redux)
+```
