@@ -11,7 +11,15 @@ const Home = () => {
   useEffect(() => {
     setPositions(clusterPositionsData.positions);
   }, []);
-
+  //마커 이미지
+  const images = {
+    src: "https://s3.ap-northeast-2.amazonaws.com/hyunsangwon.pro/home.png",
+    size: {
+      width: 44,
+      height: 49,
+    },
+  }
+  //클러스터 아이콘 스타일
   const styles = [
     {
       width: '65px',
@@ -24,13 +32,16 @@ const Home = () => {
       lineHeight: '50px',
     },
   ];
-
+  //카카오맵 중앙 위치 (대전 시청)
+  const center = {
+    lat: 36.3504567, lng: 127.3848187
+  };
   return (
     <div className="map-container">
       <Map
-        center={{ lat: 36.2683, lng: 127.6358 }}
+        center={center}
         style={{ width: '100%', height: '100vh' }}
-        level={12}
+        level={8}
         ref={mapRef}
       >
         <MarkerClusterer
@@ -48,6 +59,7 @@ const Home = () => {
                 lat: pos.lat,
                 lng: pos.lng,
               }}
+              image = {images}
               onClick={() => setIsOpen(true)}
             ></MapMarker>
           ))}
