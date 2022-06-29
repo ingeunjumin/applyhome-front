@@ -1,5 +1,5 @@
 import { React, useEffect, useState, useRef } from 'react';
-import { Map, MarkerClusterer, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
+import { Map, MarkerClusterer, MapMarker } from 'react-kakao-maps-sdk';
 import { clusterPositionsData } from '../../common/data';
 import ApartmentInfo from '../ApartmentInfo/ApartmentInfo';
 
