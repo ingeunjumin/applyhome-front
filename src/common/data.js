@@ -1,5 +1,6 @@
 export const clusterPositionsData = {
   positions: [
+    { lat: 33.451475, lng: 126.570528 },
     {
       lat: 37.27943075229118,
       lng: 127.01763998406159,

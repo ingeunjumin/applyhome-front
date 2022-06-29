@@ -1,11 +1,11 @@
 import React from 'react';
-import './Apartment.css';
+import './ApartmentInfo.css';
 import Graph from '../Graph/Graph';
 
-const Apartment = () => {
+const ApartmentInfo = () => {
   return (
     <div className="scene-apt">
-      <div className="search-group">
+      <div className="info-group">
         <div className="header-info">
           <h1>
             <a href="#">가양동 대주파크빌</a>
@@ -119,4 +119,4 @@ const Apartment = () => {
   );
 };
 
-export default Apartment;
+export default ApartmentInfo;

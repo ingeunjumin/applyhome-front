@@ -1,9 +1,12 @@
 import { React, useEffect, useState, useRef } from 'react';
-import { Map, MarkerClusterer, MapMarker } from 'react-kakao-maps-sdk';
+import { Map, MarkerClusterer, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
 import { clusterPositionsData } from '../../common/data';
+import ApartmentInfo from '../ApartmentInfo/ApartmentInfo';
+
 const Home = () => {
   const mapRef = useRef();
   const [positions, setPositions] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setPositions(clusterPositionsData.positions);
@@ -45,8 +48,10 @@ const Home = () => {
                 lat: pos.lat,
                 lng: pos.lng,
               }}
+              onClick={() => setIsOpen(true)}
             ></MapMarker>
           ))}
+          {isOpen && <ApartmentInfo />}
         </MarkerClusterer>
       </Map>
     </div>
