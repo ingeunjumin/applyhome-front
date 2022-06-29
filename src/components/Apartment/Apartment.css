@@ -1,0 +1,254 @@
+.scene-apt {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  width: 375px;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+.search-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4d55b2;
+  padding-top: 12px;
+}
+
+.header-info {
+  position: relative;
+  height: 58px;
+  padding: 0 21px 0 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-info h1 {
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 1px;
+  font-size: 25px;
+  line-height: 1.3;
+  max-height: 42px;
+  font-weight: 300;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header-info h1 a {
+  color: #fff;
+}
+.address-info {
+  border-bottom: 1px solid #565eb6;
+  text-align: center;
+  padding: 0 8px 10px 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.address-info h2 {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 200;
+  color: #dedeea;
+}
+.tiny-scroll {
+  overflow: visible;
+  user-select: none;
+  height: auto;
+}
+.result {
+  margin-top: 162px;
+  overflow: hidden scroll;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #eaebed;
+}
+.card {
+  border-top: 0;
+  border-bottom: 4px solid #eaebed;
+  background-color: #fff;
+}
+
+.css-oiiy04 {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  font-family: SpoqaHanSans, SpoqaHanSansWeb;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-1nak9uh {
+  padding: 23px 20px 10px;
+  box-sizing: border-box;
+  margin-right: 115px;
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  place-content: stretch space-between;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  color: rgb(72, 72, 72);
+  font-size: 13px;
+}
+
+.css-149atbn {
+  flex: 0 0 50%;
+  width: 50%;
+  white-space: nowrap;
+  padding-bottom: 3px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.css-70gr6e {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  height: 35px;
+  line-height: 31px;
+  padding: 0px 8px;
+  color: rgb(72, 72, 72);
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+}
+.realPrice {
+  position: relative;
+  color: #4337de;
+  background-color: #fff;
+}
+.price-group {
+  position: relative;
+  height: 50px;
+  padding: 15px 20px 0;
+}
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+}
+.price {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+}
+
+.chart-container {
+  position: relative;
+}
+
+.chart-type {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.chart-menu-type.on {
+  border-bottom: 2px solid #333;
+}
+
+.chart-menu-type {
+  display: table-cell;
+  height: 43px;
+  text-align: center;
+}
+
+.btn-chart-type {
+  color: #000;
+  display: block;
+  line-height: 43px;
+}
+
+.chart-wrap {
+  position: relative;
+  height: 200px;
+}
+
+.css-q3by2j {
+  padding: 16px 20px 0px;
+  position: relative;
+  text-align: center;
+}
+.css-lwlhki {
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  width: 100%;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.css-1skvx7a {
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.css-1qyfbk {
+  border-top: 1px solid rgb(242, 242, 242);
+  font-size: 13px;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  color: rgb(72, 72, 72);
+}
+
+.css-a7448w {
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.css-1f5shc1:first-child {
+  padding-left: 4px;
+}
+
+.css-1f5shc1 {
+  position: relative;
+  text-align: center;
+  color: rgb(72, 72, 72);
+  vertical-align: middle;
+  border-top: 1px solid rgb(242, 242, 242);
+  width: 25%;
+  min-width: 75px;
+  letter-spacing: -0.4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.css-1a7uf1n {
+  text-align: center;
+  font-size: 13px;
+  color: rgb(72, 72, 72);
+  vertical-align: middle;
+  border-top: 1px solid rgb(242, 242, 242);
+  position: relative;
+  font-weight: 600;
+  white-space: nowrap;
+}
