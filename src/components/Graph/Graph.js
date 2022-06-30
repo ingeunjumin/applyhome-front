@@ -1,4 +1,8 @@
-import React from 'react';
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAsyncApartmentsContract } from '../../features/apartments/apartmentSlice';
+import { getApartmentsContract } from '../../features/apartments/apartmentSlice';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -27,7 +31,15 @@ const data = {
   ],
 };
 
-const Graph = () => {
+const Graph = (props) => {
+  const param = props.data;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAsyncApartmentsContract(param));
+  }, [dispatch]);
+  const apartmentsContract = useSelector(getApartmentsContract);
+  console.log(apartmentsContract);
+
   return <Line data={data} />;
 };
 

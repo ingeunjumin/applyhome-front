@@ -38,6 +38,8 @@ const center = {
 const Home = () => {
   const mapRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const [idx, setIdx] = useState(0);
+
   const param = 'apartments';
   const dispatch = useDispatch();
 
@@ -52,7 +54,7 @@ const Home = () => {
       <Map center={center} style={{ width: '100%', height: '100vh' }} level={8} ref={mapRef}>
         <MarkerClusterer averageCenter={true} minLevel={5} disableClickZoom={true} styles={styles}>
           {apartments.length === undefined
-            ? console.log('init...')
+            ? console.log('map init...')
             : apartments.map((res) => (
                 <MapMarker
                   key={res.apartmentsNo}
@@ -61,10 +63,13 @@ const Home = () => {
                     lng: res.longitude,
                   }}
                   image={images}
-                  onClick={() => setIsOpen(true)}
-                ></MapMarker>
+                  onClick={() => {
+                    setIdx(res.apartmentsNo);
+                    setIsOpen(true);
+                  }}
+                />
               ))}
-          {isOpen && <ApartmentInfo />}
+          {isOpen && idx > 0 && <ApartmentInfo data={idx} />}
         </MarkerClusterer>
       </Map>
     </div>

@@ -9,8 +9,26 @@ export const fetchAsyncApartments = createAsyncThunk(
   },
 );
 
+export const fetchAsyncApartmentsDetail = createAsyncThunk(
+  'apartments/fetchAsyncApartmentsDetail',
+  async (aptno) => {
+    const response = await apartmentsApi.get(`apartments?aptno=${aptno}`);
+    return response.data;
+  },
+);
+
+export const fetchAsyncApartmentsContract = createAsyncThunk(
+  'apartments/fetchAsyncApartmentsContract',
+  async (aptno) => {
+    const response = await apartmentsApi.get(`apartments/contract?aptno=${aptno}&term=3}`);
+    return response.data;
+  },
+);
+
 const initialState = {
   apartments: {},
+  selectApartments: {},
+  selectContract: {},
 };
 
 const slice = createSlice({
@@ -23,8 +41,17 @@ const slice = createSlice({
     [fetchAsyncApartments.fulfilled]: (state, { payload }) => {
       return { ...state, apartments: payload };
     },
+    [fetchAsyncApartmentsDetail.fulfilled]: (state, { payload }) => {
+      return { ...state, selectApartments: payload };
+    },
+    [fetchAsyncApartmentsContract.fulfilled]: (state, { payload }) => {
+      return { ...state, selectContract: payload };
+    },
   },
 });
 
 export const getAllApartments = (state) => state.reducerName.apartments; //state.reducerName.apartments : 리듀서 이름.초기값state이름
+export const getApartmentsDetail = (state) => state.reducerName.selectApartments;
+export const getApartmentsContract = (state) => state.reducerName.selectContract;
+
 export default slice.reducer;
