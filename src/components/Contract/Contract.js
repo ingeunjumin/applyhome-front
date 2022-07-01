@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncApartmentsContract } from '../../features/apartments/apartmentSlice';
 import { getApartmentsContract } from '../../features/apartments/apartmentSlice';
@@ -42,14 +42,15 @@ const getGraphData = (obj) => {
 };
 
 const Contract = (props) => {
-  const params = { aptno: props.data, term: 3 };
+  const [term, setTerm] = useState(3);
+  console.log(term);
+  const params = { aptno: props.data, term: term };
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncApartmentsContract(params));
   }, [dispatch]);
 
   const apartmentsContract = useSelector(getApartmentsContract);
-  console.log(apartmentsContract);
 
   let renderTable = '';
   renderTable =
@@ -58,8 +59,8 @@ const Contract = (props) => {
         <td colSpan={4}>No data</td>
       </tr>
     ) : (
-      apartmentsContract.map((res) => (
-        <tr className="css-a7448w">
+      apartmentsContract.map((res, key) => (
+        <tr key={key} className="css-a7448w">
           <td className="css-1f5shc1">{res.createAt}</td>
           <td>{res.salePriceComma}</td>
           <td>{res.areaForExclusiveUse}</td>
@@ -75,19 +76,34 @@ const Contract = (props) => {
           <>
             <div className="chart-type">
               <div className="chart-menu-type on">
-                <a href="#" className="btn-chart-type" data-ga-event="apt,chartShortPeriodBtn">
+                <div
+                  className="btn-chart-type"
+                  onClick={() => {
+                    setTerm(3);
+                  }}
+                >
                   최근 3개월
-                </a>
+                </div>
               </div>
               <div className="chart-menu-type ">
-                <a href="#" className="btn-chart-type" data-ga-event="apt,chartLongPeriodBtn">
+                <div
+                  className="btn-chart-type"
+                  onClick={() => {
+                    setTerm(6);
+                  }}
+                >
+                  최근 6개월
+                </div>
+              </div>
+              <div className="chart-menu-type ">
+                <div
+                  className="btn-chart-type"
+                  onClick={() => {
+                    setTerm(12);
+                  }}
+                >
                   최근 1년
-                </a>
-              </div>
-              <div className="chart-menu-type ">
-                <a href="#" className="btn-chart-type" data-ga-event="apt,chartCompPrice">
-                  전체 기간
-                </a>
+                </div>
               </div>
             </div>
           </>
