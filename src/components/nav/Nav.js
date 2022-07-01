@@ -37,49 +37,6 @@ const Nav = () => {
               </div>
             </div>
           </div>
-          <div className="sub-filter">
-            <div className="sub-filter-layer">
-              <div className="scroll-menu-container sub-filter-container">
-                <ul className="ul-container use-right-arrow">
-                  <li className="scroll-li" data-value="trade">
-                    <a href="#" data-value="trade" data-ga-event="" className="applied">
-                      <span className="scroll-link applied">매매</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="type">
-                    <a href="#" data-value="type" data-ga-event="" className="">
-                      <span className="scroll-link">유형</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="area">
-                    <a href="#" data-value="area" data-ga-event="" className="">
-                      <span className="scroll-link">평형</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="price">
-                    <a href="#" data-value="price" data-ga-event="" className="">
-                      <span className="scroll-link">가격</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="household">
-                    <a href="#" data-value="household" data-ga-event="" className="">
-                      <span className="scroll-link">세대수</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="since">
-                    <a href="#" data-value="since" data-ga-event="" className="">
-                      <span className="scroll-link">입주년차</span>
-                    </a>
-                  </li>
-                  <li className="scroll-li" data-value="parking">
-                    <a href="#" data-value="parking" data-ga-event="" className="">
-                      <span className="scroll-link">주차</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="home-hot-content">
@@ -89,13 +46,7 @@ const Nav = () => {
               상권
             </a>
             <a href="#" className="labs-button btn-new-high">
-              출근
-            </a>
-            <a href="#" className="labs-button btn-new-high">
               청약
-            </a>
-            <a href="#" className="labs-button btn-new-high">
-              인구
             </a>
           </div>
         </div>
