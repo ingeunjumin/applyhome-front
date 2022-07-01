@@ -19,8 +19,8 @@ export const fetchAsyncApartmentsDetail = createAsyncThunk(
 
 export const fetchAsyncApartmentsContract = createAsyncThunk(
   'apartments/fetchAsyncApartmentsContract',
-  async (aptno) => {
-    const response = await apartmentsApi.get(`apartments/contract?aptno=${aptno}&term=3}`);
+  async (params) => {
+    const response = await apartmentsApi.get(`contract?aptno=${params.aptno}&term=${params.term}`);
     return response.data;
   },
 );

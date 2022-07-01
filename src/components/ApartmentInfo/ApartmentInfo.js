@@ -4,7 +4,7 @@ import { fetchAsyncApartmentsDetail } from '../../features/apartments/apartmentS
 import { getApartmentsDetail } from '../../features/apartments/apartmentSlice';
 
 import './ApartmentInfo.css';
-import Graph from '../Graph/Graph';
+import Contract from '../Contract/Contract';
 
 const ApartmentInfo = (props) => {
   const param = props.data;
@@ -51,87 +51,9 @@ const ApartmentInfo = (props) => {
                     <h3 className="title">최근 실거래 기준 평균</h3>
                     <div className="price">{apartmentsDetail.strPrice}</div>
                   </div>
-                  <div className="chart">
-                    <div className="chart-container">
-                      <div className="chart-type">
-                        <div className="chart-menu-type on">
-                          <a
-                            href="#"
-                            className="btn-chart-type"
-                            data-ga-event="apt,chartShortPeriodBtn"
-                          >
-                            최근 6개월
-                          </a>
-                        </div>
-                        <div className="chart-menu-type ">
-                          <a
-                            href="#"
-                            className="btn-chart-type"
-                            data-ga-event="apt,chartLongPeriodBtn"
-                          >
-                            최근 3년
-                          </a>
-                        </div>
-                        <div className="chart-menu-type ">
-                          <a href="#" className="btn-chart-type" data-ga-event="apt,chartCompPrice">
-                            전체 기간
-                          </a>
-                        </div>
-                      </div>
-                      {/* 그래프 */}
-                      <div className="chart-wrap">
-                        <Graph data={apartmentsDetail.apartmentsNo}></Graph>
-                      </div>
-                    </div>
-                  </div>
-                  {/* 거래내역 테이블 */}
-                  <div className="css-q3by2j">
-                    <table className="css-lwlhki">
-                      <thead>
-                        <tr className="css-1skvx7a">
-                          <td className="css-1qyfbk">계약일</td>
-                          <td className="css-1qyfbk">가격</td>
-                          <td className="css-1qyfbk">타입</td>
-                          <td className="css-1qyfbk">층</td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="css-a7448w">
-                          <td className="css-1f5shc1">22.05.28</td>
-                          <td className="css-1a7uf1n">
-                            <div className="css-zl1inp">2억 800</div>
-                          </td>
-                          <td data-tooltip="102타입" className="css-x23z8k">
-                            102타입
-                          </td>
-                          <td className="css-ygyrr4">2층</td>
-                        </tr>
-                        <tr className="css-a7448w">
-                          <td className="css-1f5shc1">22.05.28</td>
-                          <td className="css-1a7uf1n">
-                            <div className="css-zl1inp">2억 800</div>
-                          </td>
-                          <td data-tooltip="102타입" className="css-x23z8k">
-                            102타입
-                          </td>
-                          <td className="css-ygyrr4">2층</td>
-                        </tr>
-                        <tr className="css-a7448w">
-                          <td className="css-1f5shc1">22.05.28</td>
-                          <td className="css-1a7uf1n">
-                            <div className="css-zl1inp">2억 800</div>
-                          </td>
-                          <td data-tooltip="102타입" className="css-x23z8k">
-                            102타입
-                          </td>
-                          <td className="css-ygyrr4">2층</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <Contract data={apartmentsDetail.apartmentsNo}></Contract>
                 </div>
               </div>
-              {/* 거래세 */}
             </div>
           </div>
         </>

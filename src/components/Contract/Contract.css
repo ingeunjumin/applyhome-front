@@ -1,0 +1,103 @@
+.chart {
+  position: relative;
+  width: 100%;
+}
+
+.chart-container {
+  position: relative;
+}
+
+.chart-type {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.chart-menu-type.on {
+  border-bottom: 2px solid #333;
+}
+
+.chart-menu-type {
+  display: table-cell;
+  height: 43px;
+  text-align: center;
+}
+
+.btn-chart-type {
+  color: #000;
+  display: block;
+  line-height: 43px;
+}
+
+.chart-wrap {
+  position: relative;
+  height: 200px;
+}
+
+.css-q3by2j {
+  padding: 16px 20px 0px;
+  position: relative;
+  text-align: center;
+}
+.css-lwlhki {
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  width: 100%;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.css-1skvx7a {
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.css-1qyfbk {
+  border-top: 1px solid rgb(242, 242, 242);
+  font-size: 13px;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  color: rgb(72, 72, 72);
+}
+
+.css-a7448w {
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.css-1f5shc1 {
+  position: relative;
+  text-align: center;
+  color: rgb(72, 72, 72);
+  vertical-align: middle;
+  border-top: 1px solid rgb(242, 242, 242);
+  width: 25%;
+  min-width: 75px;
+  letter-spacing: -0.4px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.css-1a7uf1n {
+  text-align: center;
+  font-size: 13px;
+  color: rgb(72, 72, 72);
+  vertical-align: middle;
+  border-top: 1px solid rgb(242, 242, 242);
+  position: relative;
+  font-weight: 600;
+  white-space: nowrap;
+}
