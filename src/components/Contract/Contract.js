@@ -43,13 +43,12 @@ const getGraphData = (obj) => {
 
 const Contract = (props) => {
   const [term, setTerm] = useState(3);
-  console.log(term);
   const params = { aptno: props.data, term: term };
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncApartmentsContract(params));
-  }, [dispatch]);
-
+  }, [dispatch, term]); //state에 값이 변경될 때 이벤트 활성
   const apartmentsContract = useSelector(getApartmentsContract);
 
   let renderTable = '';
@@ -62,9 +61,9 @@ const Contract = (props) => {
       apartmentsContract.map((res, key) => (
         <tr key={key} className="css-a7448w">
           <td className="css-1f5shc1">{res.createAt}</td>
-          <td>{res.salePriceComma}</td>
-          <td>{res.areaForExclusiveUse}</td>
-          <td>{res.floor}</td>
+          <td className="table-data-price">{res.salePriceComma}</td>
+          <td className="table-data">{res.areaForExclusiveUse}</td>
+          <td className="table-data">{res.floor}</td>
         </tr>
       ))
     );

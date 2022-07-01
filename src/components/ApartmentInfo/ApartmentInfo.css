@@ -21,23 +21,25 @@
   padding: 0 21px 0 20px;
   text-align: center;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .header-info h1 {
-  width: 270px;
+  width: 300px;
   margin: 0 auto;
   padding-top: 1px;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 1.3;
   max-height: 42px;
   font-weight: 300;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #fff;
 }
-.header-info h1 a {
+.apartments-name {
   color: #fff;
 }
 .address-info {
@@ -143,4 +145,24 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 1;
+}
+
+.btn-close {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  padding-right: 20px;
+  padding-top: 21px;
+}
+
+.btn-close span {
+  display: inline-block;
+  overflow: hidden;
+  width: 14px;
+  height: 14px;
+  background-image: url(../../images/sp_pc.e76dd6e1fb046cb8a71ec352aca15fdd.png);
+  background-position: -170px -275px;
+  line-height: 999em;
+  vertical-align: top;
 }

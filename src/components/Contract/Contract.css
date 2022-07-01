@@ -87,17 +87,30 @@ thead {
   width: 25%;
   min-width: 75px;
   letter-spacing: -0.4px;
-  font-size: 16px;
+  font-size: 14px;
   white-space: nowrap;
 }
 
-.css-1a7uf1n {
+.table-data-price {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
+  color: rgb(72, 72, 72);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table-data {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
   color: rgb(72, 72, 72);
   vertical-align: middle;
   border-top: 1px solid rgb(242, 242, 242);
-  position: relative;
-  font-weight: 600;
+  min-width: 40px;
+  letter-spacing: -0.4px;
+  max-width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow-wrap: normal;
 }

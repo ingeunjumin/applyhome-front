@@ -6,8 +6,9 @@ import { getApartmentsDetail } from '../../features/apartments/apartmentSlice';
 import './ApartmentInfo.css';
 import Contract from '../Contract/Contract';
 
-const ApartmentInfo = (props) => {
-  const param = props.data;
+const ApartmentInfo = ({ aptno, setIsOpen }) => {
+  const param = aptno;
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncApartmentsDetail(param));
@@ -23,8 +24,17 @@ const ApartmentInfo = (props) => {
           <div className="info-group">
             <div className="header-info">
               <h1>
-                <a href="#">{apartmentsDetail.apartmentsName}</a>
+                <div className="apartments-name">{apartmentsDetail.apartmentsName}</div>
               </h1>
+              <div className="btn-close">
+                <span
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  닫기
+                </span>
+              </div>
             </div>
             <div className="address-info">
               <h2 className="address">{apartmentsDetail.addr}</h2>
