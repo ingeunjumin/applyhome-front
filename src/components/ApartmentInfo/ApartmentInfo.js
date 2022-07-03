@@ -64,6 +64,25 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
                   <Contract data={apartmentsDetail.apartmentsNo}></Contract>
                 </div>
               </div>
+              <div className="card">
+                <div className="business">
+                  <h3 className="business-info">주변 상권 정보</h3>
+                  <div className="business-table">
+                    {apartmentsDetail.businessList.length === 0 ? (
+                      <div className="business-item">
+                        <h5 className="business-item-name">1.5km안에 상권이 없습니다.</h5>
+                      </div>
+                    ) : (
+                      apartmentsDetail.businessList.map((res, key) => (
+                        <div key={key} className="business-item">
+                          <h5 className="business-item-name">{res.businessName}</h5>
+                          <span className="business-distance">{res.distance}</span>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </>

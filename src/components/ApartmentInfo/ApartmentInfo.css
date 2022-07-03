@@ -166,3 +166,36 @@
   line-height: 999em;
   vertical-align: top;
 }
+
+/* 주변상권 */
+.business {
+  position: relative;
+  padding: 20px 0px 5px;
+}
+.business-info {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+.business-table {
+  position: relative;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+.business-item {
+  display: inline-block;
+  margin: 0px 15px 15px 0px;
+  color: #333;
+}
+.business-item-name {
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(72, 72, 72);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.business-distance {
+  font-size: 16px;
+  color: rgb(127, 126, 146);
+}
