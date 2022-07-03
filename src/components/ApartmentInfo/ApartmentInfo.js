@@ -5,7 +5,7 @@ import { getApartmentsDetail } from '../../features/apartments/apartmentSlice';
 
 import './ApartmentInfo.css';
 import Contract from '../Contract/Contract';
-
+//부모컴포넌트에서 데이터를 2개이상 받을 때
 const ApartmentInfo = ({ aptno, setIsOpen }) => {
   const param = aptno;
 
