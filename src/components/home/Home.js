@@ -29,6 +29,29 @@ const Home = () => {
           </div>
         ));
 
+  const url = window.location.pathname;
+  let renderHeader = '';
+  renderHeader =
+    url === '/' ? (
+      <div className="labs-header">
+        <div div className="labs-button on" onClick={moveHome}>
+          매매
+        </div>
+        <div className="labs-button" onClick={moveApply}>
+          청약
+        </div>
+      </div>
+    ) : (
+      <div className="labs-header">
+        <div div className="labs-button" onClick={moveHome}>
+          매매
+        </div>
+        <div className="labs-button on" onClick={moveApply}>
+          청약
+        </div>
+      </div>
+    );
+
   return (
     <div>
       <div className="nav">
@@ -57,26 +80,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home-hot-content">
-          <div className="labs">
-            <div className="labs-header">
-              <div
-                className="labs-button on"
-                onClick={() => {
-                  moveHome();
-                }}
-              >
-                매매
-              </div>
-              <div
-                className="labs-button"
-                onClick={() => {
-                  moveApply();
-                }}
-              >
-                청약
-              </div>
-            </div>
-          </div>
+          <div className="labs">{renderHeader}</div>
         </div>
       </div>
     </div>
