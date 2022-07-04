@@ -4,6 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncApartmentsRank } from '../../features/apartments/apartmentSlice';
 import { getApartmentsRank } from '../../features/apartments/apartmentSlice';
 
+const moveApply = () => {
+  document.location.href = '/apply';
+};
+const moveHome = () => {
+  document.location.href = '/';
+};
+
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,7 +25,7 @@ const Home = () => {
           <div key={res.apartmentsNo} className="rolling-item">
             <span className="rank">{key + 1}</span>
             <span className="name">{res.apartmentsName}</span>
-            <span className="price">{res.strPrice}</span>
+            <span className="rank-price">{res.strPrice}</span>
           </div>
         ));
 
@@ -52,8 +59,22 @@ const Home = () => {
         <div className="home-hot-content">
           <div className="labs">
             <div className="labs-header">
-              <div className="labs-button on">매매</div>
-              <div className="labs-button">청약</div>
+              <div
+                className="labs-button on"
+                onClick={() => {
+                  moveHome();
+                }}
+              >
+                매매
+              </div>
+              <div
+                className="labs-button"
+                onClick={() => {
+                  moveApply();
+                }}
+              >
+                청약
+              </div>
             </div>
           </div>
         </div>
