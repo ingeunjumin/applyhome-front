@@ -8,7 +8,6 @@ import Contract from '../Contract/Contract';
 //부모컴포넌트에서 데이터를 2개이상 받을 때
 const ApartmentInfo = ({ aptno, setIsOpen }) => {
   const param = aptno;
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncApartmentsDetail(param));
@@ -50,9 +49,6 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
                     <li className="css-149atbn">용적률 190%</li>
                     <li className="css-149atbn">건폐율 14%</li>
                   </ul>
-                  <a href="#" className="css-70gr6e">
-                    거리뷰
-                  </a>
                 </div>
               </div>
               <div className="card">

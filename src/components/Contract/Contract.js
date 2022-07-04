@@ -44,11 +44,12 @@ const getGraphData = (obj) => {
 const Contract = (props) => {
   const [term, setTerm] = useState(3);
   const params = { aptno: props.data, term: term };
-
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchAsyncApartmentsContract(params));
-  }, [dispatch, term]); //state에 값이 변경될 때 이벤트 활성
+  }, [dispatch, term, props.data]);
+
   const apartmentsContract = useSelector(getApartmentsContract);
 
   let renderTable = '';
