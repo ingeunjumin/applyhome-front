@@ -7,10 +7,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Home />
         <Router>
           <Routes>
-            <Route exact={true} path="/" element={<Clusterer />} />
+            <Route exact={true} path="/" element={<Home />} />
+            <Route path="/map" element={<Clusterer />} />
             <Route path="/apply" element={<Marker />} />
           </Routes>
         </Router>

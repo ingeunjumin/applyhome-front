@@ -1,88 +1,36 @@
-import { React, useEffect } from 'react';
+import React from 'react';
 import './Home.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchAsyncApartmentsRank } from '../../features/apartments/apartmentSlice';
-import { getApartmentsRank } from '../../features/apartments/apartmentSlice';
+import logo from '../../images/logo.png';
+import img from '../../images/img.png';
+import TypeWriter from 'typewriter-effect';
 
-const moveApply = () => {
-  document.location.href = '/apply';
-};
-const moveHome = () => {
-  document.location.href = '/';
+const moveMap = () => {
+  document.location.href = '/map';
 };
 
 const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAsyncApartmentsRank());
-  }, [dispatch]);
-  const apartmentsRank = useSelector(getApartmentsRank);
-  let renderPages = '';
-  renderPages =
-    apartmentsRank.length === undefined
-      ? console.log('rank init...')
-      : apartmentsRank.map((res, key) => (
-          <div key={res.apartmentsNo} className="rolling-item">
-            <span className="rank">{key + 1}</span>
-            <span className="name">{res.apartmentsName}</span>
-            <span className="rank-price">{res.strPrice}</span>
-          </div>
-        ));
-
-  const url = window.location.pathname;
-  let renderHeader = '';
-  renderHeader =
-    url === '/' ? (
-      <div className="labs-header">
-        <div div className="labs-button on" onClick={moveHome}>
-          매매
-        </div>
-        <div className="labs-button" onClick={moveApply}>
-          청약
-        </div>
-      </div>
-    ) : (
-      <div className="labs-header">
-        <div div className="labs-button" onClick={moveHome}>
-          매매
-        </div>
-        <div className="labs-button on" onClick={moveApply}>
-          청약
-        </div>
-      </div>
-    );
-
   return (
-    <div>
-      <div className="nav">
-        <div className="search-group">
-          <div className="keyword-group">
-            {/* 
-          22.07.03 검색키워드는 시간상 생략 (현상원)
-          <div>
-            <input
-              type="text"
-              className="keyword"
-              placeholder="아파트명으로 검색"
-              data-ga-event="search,input"
-            />
-            <button
-              type="button"
-              className="btn-search disabled"
-              data-ga-event="search,searchBtn"
-            ></button>
-          </div> */}
-            <div className="realtime-top-visitors">
-              <div className="single-mode">
-                <div className="rolling-container trans">{renderPages}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="home-hot-content">
-          <div className="labs">{renderHeader}</div>
-        </div>
+    <div className="intro-container">
+      <div className="navbar">
+        <img src={logo} />
       </div>
+      <div className="content">
+        <h1>
+          <TypeWriter
+            options={{
+              autoStart: true,
+              loop: true,
+              delay: 40,
+              strings: ['대전 부동산 플랫폼!', 'The 인근주민'],
+            }}
+          />
+        </h1>
+        <p>안녕하세요, 인근주민 개발팀입니다. 아래 버튼을 눌러 플랫폼을 이용해보세요.</p>
+        <a className="btn" onClick={moveMap}>
+          Getting Started
+        </a>
+      </div>
+      <img src={img} className="feature-img bounceIn" />
     </div>
   );
 };

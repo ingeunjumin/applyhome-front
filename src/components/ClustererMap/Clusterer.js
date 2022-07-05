@@ -7,6 +7,7 @@ import ApartmentInfo from '../ApartmentInfo/ApartmentInfo';
 import { fetchAsyncApartments } from '../../features/apartments/apartmentSlice';
 import { getAllApartments } from '../../features/apartments/apartmentSlice';
 import { images, styles, center } from '../../common/map-setting';
+import Nav from '../Nav/Nav';
 
 const Clusterer = () => {
   const mapRef = useRef();
@@ -22,28 +23,36 @@ const Clusterer = () => {
   const apartments = useSelector(getAllApartments);
 
   return (
-    <div className="map-container">
-      <Map center={center} style={{ width: '100%', height: '100vh' }} level={8} ref={mapRef}>
-        <MarkerClusterer averageCenter={true} minLevel={5} disableClickZoom={true} styles={styles}>
-          {apartments.length === undefined
-            ? console.log('map init...')
-            : apartments.map((res) => (
-                <MapMarker
-                  key={res.apartmentsNo}
-                  position={{
-                    lat: res.latitude,
-                    lng: res.longitude,
-                  }}
-                  image={images}
-                  onClick={() => {
-                    setIdx(res.apartmentsNo);
-                    setIsOpen(true);
-                  }}
-                />
-              ))}
-          {isOpen && <ApartmentInfo aptno={idx} setIsOpen={setIsOpen} />}
-        </MarkerClusterer>
-      </Map>
+    <div>
+      <Nav />
+      <div className="map-container">
+        <Map center={center} style={{ width: '100%', height: '100vh' }} level={8} ref={mapRef}>
+          <MarkerClusterer
+            averageCenter={true}
+            minLevel={5}
+            disableClickZoom={true}
+            styles={styles}
+          >
+            {apartments.length === undefined
+              ? console.log('map init...')
+              : apartments.map((res) => (
+                  <MapMarker
+                    key={res.apartmentsNo}
+                    position={{
+                      lat: res.latitude,
+                      lng: res.longitude,
+                    }}
+                    image={images}
+                    onClick={() => {
+                      setIdx(res.apartmentsNo);
+                      setIsOpen(true);
+                    }}
+                  />
+                ))}
+            {isOpen && <ApartmentInfo aptno={idx} setIsOpen={setIsOpen} />}
+          </MarkerClusterer>
+        </Map>
+      </div>
     </div>
   );
 };
