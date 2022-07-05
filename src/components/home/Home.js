@@ -21,10 +21,11 @@ const Home = () => {
               autoStart: true,
               loop: true,
               delay: 40,
-              strings: ['대전 부동산 플랫폼!', 'The 인근주민'],
+              strings: ['대전 부동산 플랫폼.', 'The 인근주민'],
             }}
           />
         </h1>
+        <p>042 8282 대전 부동산 시세와 청약정보를 8282!</p>
         <p>안녕하세요, 인근주민 개발팀입니다. 아래 버튼을 눌러 플랫폼을 이용해보세요.</p>
         <a className="btn" onClick={moveMap}>
           Getting Started
