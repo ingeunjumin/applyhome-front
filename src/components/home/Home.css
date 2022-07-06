@@ -40,6 +40,12 @@ nav ul li a {
   color: #333;
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  margin-top: 8%;
+  justify-content: space-between;
+}
 .content h1 {
   font-size: 55px;
   margin-top: 24px;
@@ -49,7 +55,6 @@ nav ul li a {
 
 .content {
   margin-left: 1%;
-  margin-top: 10%;
 }
 
 .content p {
@@ -78,11 +83,72 @@ nav ul li a {
   transition: 0.7s;
 }
 
+.bounceIn {
+  animation-duration: 1.75s;
+  animation-name: bounceIn;
+}
+/*팀원 소개 css*/
 .feature-img {
-  height: 80%;
-  position: absolute;
-  bottom: 0;
-  right: 160px;
+  display: flex;
+}
+.card {
+  width: 275px;
+  height: 290px;
+  padding: 5px;
+  margin-right: 2%;
+  border-radius: 2%;
+}
+.card .content-team {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0e0e0;
+}
+
+.card .content-team .img {
+  height: 130px;
+  width: 130px;
+  background-color: #ff676d;
+  margin-bottom: 14px;
+  padding: 3%;
+  border-radius: 50%;
+}
+
+.card .content-team .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #fff;
+}
+.card .content-team .details .name {
+  font-size: 20px;
+  font-weight: 800;
+}
+.card .content-team .details .job {
+  font-size: 20px;
+  color: #ff676d;
+}
+.card .content-team .media-icons {
+  margin-top: 10px;
+  display: flex;
+}
+.card .content-team .media-icons a {
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  background: #ff676d;
+  margin: 0 4px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  font-size: 25px;
+  border: 2px solid transparent;
 }
 
 @keyframes bounceIn {
@@ -121,9 +187,4 @@ nav ul li a {
     opacity: 1;
     transform: scale3d(1, 1, 1);
   }
-}
-
-.bounceIn {
-  animation-duration: 4.75s;
-  animation-name: bounceIn;
 }
