@@ -45,11 +45,8 @@ const Home = () => {
                 <div className="job">Front Developer</div>
               </div>
               <div className="media-icons">
-                <a href="#">
+                <a href="https://github.com/hyunsangwon">
                   <i className="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
                 </a>
               </div>
             </div>
@@ -64,11 +61,8 @@ const Home = () => {
                 <div className="job">Backend Developer</div>
               </div>
               <div className="media-icons">
-                <a href="#">
+                <a href="https://github.com/dkdmlk">
                   <i className="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
                 </a>
               </div>
             </div>
@@ -83,11 +77,8 @@ const Home = () => {
                 <div className="job">Backend Developer</div>
               </div>
               <div className="media-icons">
-                <a href="#">
+                <a href="https://github.com/RyuGeunHwan">
                   <i className="fab fa-github"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
                 </a>
               </div>
             </div>
