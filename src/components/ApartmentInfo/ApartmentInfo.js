@@ -44,10 +44,11 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
               <div className="card">
                 <div className="css-oiiy04">
                   <ul className="css-1nak9uh">
-                    <li className="css-149atbn">590세대</li>
-                    <li className="css-149atbn">{apartmentsDetail.createAt}</li>
-                    <li className="css-149atbn">용적률 190%</li>
-                    <li className="css-149atbn">건폐율 14%</li>
+                    <li className="css-149atbn">난방방식 : {apartmentsDetail.heatType}</li>
+                    <li className="css-149atbn">관리방식 : {apartmentsDetail.manageType}</li>
+                    <li className="css-149atbn">세대수 : {apartmentsDetail.sedeCnt}세대</li>
+                    <li className="css-149atbn">동수 : {apartmentsDetail.dongCnt}동</li>
+                    <li className="css-149atbn">건립일 : {apartmentsDetail.createAt}</li>
                   </ul>
                 </div>
               </div>
