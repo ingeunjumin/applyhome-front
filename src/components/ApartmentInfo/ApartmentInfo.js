@@ -11,7 +11,7 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncApartmentsDetail(param));
-  }, [dispatch]);
+  }, [dispatch, param]); //useState가 아니여도, 변수 값이 바뀌면 useEffect 실행
   const apartmentsDetail = useSelector(getApartmentsDetail);
 
   return (
