@@ -47,8 +47,7 @@
   text-align: center;
   padding: 0 8px 10px 8px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
 }
 .address-info h2 {
   display: block;
@@ -57,6 +56,16 @@
   font-weight: 200;
   color: #dedeea;
 }
+.address-info button {
+  padding: 2.5%;
+  background: #f8f9fc;
+  color: #5a5c69;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  text-align: center;
+}
+
 .tiny-scroll {
   overflow: visible;
   user-select: none;

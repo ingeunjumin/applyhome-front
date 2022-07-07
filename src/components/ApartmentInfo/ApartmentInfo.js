@@ -1,10 +1,15 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncApartmentsDetail } from '../../features/apartments/apartmentSlice';
 import { getApartmentsDetail } from '../../features/apartments/apartmentSlice';
 
 import './ApartmentInfo.css';
 import Contract from '../Contract/Contract';
+
+const moveRoadView = (lat, lng) => {
+  document.location.href = '/road-view/' + lat + '/' + lng;
+};
+
 //부모컴포넌트에서 데이터를 2개이상 받을 때
 const ApartmentInfo = ({ aptno, setIsOpen }) => {
   const param = aptno;
@@ -13,7 +18,6 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
     dispatch(fetchAsyncApartmentsDetail(param));
   }, [dispatch, param]); //useState가 아니여도, 변수 값이 바뀌면 useEffect 실행
   const apartmentsDetail = useSelector(getApartmentsDetail);
-
   return (
     <div className="scene-apt">
       {apartmentsDetail.apartmentsNo === undefined ? (
@@ -37,6 +41,14 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
             </div>
             <div className="address-info">
               <h2 className="address">{apartmentsDetail.addr}</h2>
+              <button
+                type="button"
+                onClick={() => {
+                  moveRoadView(apartmentsDetail.latitude, apartmentsDetail.longitude);
+                }}
+              >
+                거리뷰
+              </button>
             </div>
           </div>
           <div className="tiny-scroll">
