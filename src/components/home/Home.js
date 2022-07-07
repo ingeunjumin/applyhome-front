@@ -35,7 +35,7 @@ const Home = () => {
           </a>
         </div>
         <div className="feature-img">
-          <div className="card bounceIn">
+          <div className="profile bounceIn">
             <div className="content-team">
               <div className="img">
                 <img src={hyun} />
@@ -51,7 +51,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card bounceIn">
+          <div className="profile bounceIn">
             <div className="content-team">
               <div className="img">
                 <img src={kang} />
@@ -67,7 +67,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card bounceIn">
+          <div className="profile bounceIn">
             <div className="content-team">
               <div className="img">
                 <img src={ryu} />
