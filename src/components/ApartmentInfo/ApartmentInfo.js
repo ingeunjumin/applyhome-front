@@ -41,14 +41,14 @@ const ApartmentInfo = ({ aptno, setIsOpen }) => {
             </div>
             <div className="address-info">
               <h2 className="address">{apartmentsDetail.addr}</h2>
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   moveRoadView(apartmentsDetail.latitude, apartmentsDetail.longitude);
                 }}
               >
                 거리뷰
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="tiny-scroll">
