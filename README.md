@@ -2,7 +2,7 @@
 
 인근주민 부동산 플랫폼 프론트
 
-## 시작하는 방법
+## 시작하는 방법 (로컬)
 
 1. node 설치 (https://nodejs.org/ko/download/)
 2. react 설치
@@ -52,3 +52,17 @@ src
 │
 └───features (redux)
 ```
+
+### Ubuntu에서 react 시작하기
+
+- root 로그인 후 아래 명령어 입력
+
+1. curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+2. bash nodesource_setup.sh
+3. apt-get install nodejs -y
+4. npm install -g create-react-app
+5. cd /home/ubunut
+6. git clone https://github.com/ingeunjumin/applyhome-front.git
+7. cd applyhome-front/
+8. npm install
+9. nohup npm start &
